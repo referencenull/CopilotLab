@@ -58,7 +58,7 @@ function displayProducts(productsToDisplay) {
                 </div>
             </div>
             <div class="product-actions">
-                <button class="btn btn-edit" onclick="showEditModal(${product.id}, '${escapeHtml(product.name).replace(/'/g, "\\'")}', ${product.quantity})">
+                <button class="btn btn-edit" onclick="showEditModal(${product.id})">
                     📝 Update Qty
                 </button>
                 <button class="btn btn-danger" onclick="deleteProduct(${product.id})">
@@ -102,11 +102,14 @@ function closeAddModal() {
 }
 
 // Show edit quantity modal
-function showEditModal(id, name, quantity) {
+function showEditModal(id) {
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+    
     currentEditId = id;
     document.getElementById('editProductId').value = id;
-    document.getElementById('editProductName').value = name;
-    document.getElementById('editQuantity').value = quantity;
+    document.getElementById('editProductName').value = product.name;
+    document.getElementById('editQuantity').value = product.quantity;
     document.getElementById('editModal').style.display = 'block';
 }
 
