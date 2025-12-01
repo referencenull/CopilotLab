@@ -1,6 +1,13 @@
 let products = [];
 let currentEditId = null;
 
+// HTML escape function to prevent XSS
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 // Load products on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadProducts();
@@ -40,9 +47,9 @@ function displayProducts(productsToDisplay) {
     
     grid.innerHTML = productsToDisplay.map(product => `
         <div class="product-card">
-            <span class="product-category">${product.category}</span>
-            <div class="product-name">${product.name}</div>
-            <div class="product-description">${product.description || 'No description available'}</div>
+            <span class="product-category">${escapeHtml(product.category)}</span>
+            <div class="product-name">${escapeHtml(product.name)}</div>
+            <div class="product-description">${escapeHtml(product.description || 'No description available')}</div>
             <div class="product-info">
                 <div class="product-price">$${product.price.toFixed(2)}</div>
                 <div class="product-quantity ${product.quantity < 20 ? 'low-stock' : ''}">
@@ -51,7 +58,7 @@ function displayProducts(productsToDisplay) {
                 </div>
             </div>
             <div class="product-actions">
-                <button class="btn btn-edit" onclick="showEditModal(${product.id}, '${product.name}', ${product.quantity})">
+                <button class="btn btn-edit" onclick="showEditModal(${product.id}, '${escapeHtml(product.name).replace(/'/g, "\\'")}', ${product.quantity})">
                     📝 Update Qty
                 </button>
                 <button class="btn btn-danger" onclick="deleteProduct(${product.id})">
