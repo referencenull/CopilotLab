@@ -24,26 +24,26 @@ db.serialize(() => {
     )`);
 
     const products = [
-        ['Wireless Mouse', 'Electronics', 29.99, 45, 'Ergonomic wireless mouse with USB receiver'],
-        ['Mechanical Keyboard', 'Electronics', 89.99, 23, 'RGB mechanical gaming keyboard'],
-        ['USB-C Hub', 'Electronics', 39.99, 67, '7-in-1 USB-C hub with HDMI and card reader'],
-        ['Laptop Stand', 'Accessories', 34.99, 52, 'Adjustable aluminum laptop stand'],
-        ['Desk Lamp', 'Office', 44.99, 31, 'LED desk lamp with brightness control'],
-        ['Office Chair', 'Furniture', 199.99, 15, 'Ergonomic office chair with lumbar support'],
-        ['Desk Organizer', 'Office', 19.99, 88, 'Bamboo desk organizer with compartments'],
-        ['Headphones', 'Electronics', 79.99, 38, 'Noise-cancelling over-ear headphones'],
-        ['Webcam', 'Electronics', 69.99, 26, '1080p HD webcam with microphone'],
-        ['Monitor', 'Electronics', 249.99, 18, '27-inch 4K IPS monitor'],
-        ['Notebook Set', 'Stationery', 14.99, 120, 'Set of 3 premium notebooks'],
-        ['Pen Set', 'Stationery', 12.99, 95, 'Professional ballpoint pen set'],
-        ['Water Bottle', 'Accessories', 24.99, 73, 'Insulated stainless steel water bottle'],
-        ['Phone Holder', 'Accessories', 16.99, 64, 'Adjustable phone holder for desk'],
-        ['Cable Organizer', 'Accessories', 9.99, 142, 'Cable management clips and ties'],
-        ['Mousepad', 'Accessories', 19.99, 85, 'Extended gaming mousepad'],
-        ['Whiteboard', 'Office', 54.99, 22, 'Magnetic dry-erase whiteboard'],
-        ['Filing Cabinet', 'Furniture', 149.99, 12, '3-drawer metal filing cabinet'],
-        ['Bookshelf', 'Furniture', 129.99, 9, '5-tier wooden bookshelf'],
-        ['Plant Pot', 'Decor', 17.99, 56, 'Ceramic plant pot with drainage tray']
+        ['Yamaha YZ450F', 'Bikes', 9399.99, 5, 'High-performance 450cc motocross bike with electric start'],
+        ['KTM 250 SX-F', 'Bikes', 8999.99, 7, 'Lightweight 250cc four-stroke competition bike'],
+        ['Honda CRF450R', 'Bikes', 9599.99, 4, 'Championship-winning 450cc motocross machine'],
+        ['Kawasaki KX250', 'Bikes', 8299.99, 6, 'Powerful 250cc two-stroke racer'],
+        ['Suzuki RM-Z450', 'Bikes', 8899.99, 5, 'Competitive 450cc motocross bike with advanced suspension'],
+        ['Husqvarna FC 350', 'Bikes', 9899.99, 3, 'Premium 350cc race-ready motocross bike'],
+        ['Fox Racing V1 Helmet', 'Helmets', 199.99, 25, 'DOT-certified motocross helmet with MIPS technology'],
+        ['Alpinestars Supertech M10', 'Helmets', 749.99, 12, 'Professional-grade carbon fiber helmet'],
+        ['Bell Moto-9 Flex', 'Helmets', 599.99, 18, 'Flex technology helmet with superior impact protection'],
+        ['Thor Sector Helmet', 'Helmets', 149.99, 30, 'Entry-level motocross helmet with aggressive styling'],
+        ['Fox Racing 180 Jersey', 'Gear', 49.99, 45, 'Moisture-wicking motocross jersey with stretch panels'],
+        ['Alpinestars Racer Pants', 'Gear', 159.99, 35, 'Durable motocross pants with reinforced knees'],
+        ['Leatt 3DF Impact Shorts', 'Gear', 89.99, 28, 'Protective shorts with hip and tailbone padding'],
+        ['Thor Force Gloves', 'Gear', 29.99, 60, 'Lightweight gloves with silicone palm print'],
+        ['Gaerne SG-12 Boots', 'Boots', 599.99, 15, 'Premium motocross boots with dual-stage pivot system'],
+        ['Alpinestars Tech 10 Boots', 'Boots', 699.99, 10, 'Top-tier racing boots with innovative closure system'],
+        ['Fox Comp Boots', 'Boots', 249.99, 22, 'Entry to mid-level motocross boots'],
+        ['Dunlop Geomax MX33', 'Tires', 89.99, 50, 'Soft to medium terrain rear tire 110/90-19'],
+        ['Michelin StarCross 5', 'Tires', 109.99, 40, 'All-terrain front tire 80/100-21'],
+        ['Pirelli Scorpion MX32', 'Tires', 99.99, 45, 'Mid-soft terrain motocross tire']
     ];
 
     const stmt = db.prepare('INSERT INTO products (name, category, price, quantity, description) VALUES (?, ?, ?, ?, ?)');

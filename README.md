@@ -1,26 +1,26 @@
-# CopilotLab - Inventory Management System
+# MotoX Pro - Motocross Bike Inventory Management System
 
-A modern web application for managing retail store inventory. Built with Node.js, Express, SQLite, and vanilla JavaScript.
+A modern web application for managing motocross bike and gear inventory. Built with Node.js, Express, SQLite, and vanilla JavaScript.
 
 ## Features
 
-- 📦 **Browse Products**: View all products in a modern, responsive grid layout
-- ➕ **Add Products**: Easy-to-use form for adding new products to inventory
-- 🗑️ **Delete Products**: Remove products from inventory with confirmation
-- 📝 **Update Quantity**: Modify product quantities with a simple interface
-- 🔍 **Search**: Real-time search functionality to filter products
-- 📊 **Statistics**: Dashboard showing total products, inventory value, and low stock alerts
-- 🎨 **Modern UI**: Beautiful gradient design with smooth animations
+- 🏍️ **Browse Inventory**: View all motocross bikes, helmets, gear, and accessories in a modern, responsive grid layout
+- ➕ **Add Items**: Easy-to-use form for adding new bikes and gear to inventory
+- 🗑️ **Delete Items**: Remove items from inventory with confirmation
+- 📝 **Update Quantity**: Modify inventory quantities with a simple interface
+- 🔍 **Search**: Real-time search functionality to filter bikes, helmets, and gear
+- 📊 **Statistics**: Dashboard showing total items, inventory value, and low stock alerts
+- 🎨 **Motocross Theme**: Orange and black gradient design inspired by motocross racing
 - 📱 **Responsive**: Works on desktop, tablet, and mobile devices
 
 ## Pre-populated Database
 
-The application comes with 20 pre-populated products across various categories:
-- Electronics (Mouse, Keyboard, Headphones, Monitor, etc.)
-- Office Supplies (Desk Lamp, Organizer, Whiteboard, etc.)
-- Furniture (Office Chair, Bookshelf, Filing Cabinet, etc.)
-- Accessories (Laptop Stand, Water Bottle, Cable Organizer, etc.)
-- Stationery (Notebooks, Pen Sets, etc.)
+The application comes with 20 pre-populated motocross items across various categories:
+- **Bikes**: Premium motocross bikes from top brands (Yamaha, KTM, Honda, Kawasaki, Suzuki, Husqvarna)
+- **Helmets**: Safety-certified helmets from Fox Racing, Alpinestars, Bell, and Thor
+- **Gear**: Jerseys, pants, protective shorts, and gloves
+- **Boots**: Professional motocross boots from Gaerne, Alpinestars, and Fox
+- **Tires**: High-performance motocross tires from Dunlop, Michelin, and Pirelli
 
 ## Installation
 
@@ -55,7 +55,7 @@ The application comes with 20 pre-populated products across various categories:
 - **Backend**: Node.js with Express
 - **Database**: SQLite (in-memory for easy testing)
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Styling**: Modern gradient design with animations
+- **Styling**: Motocross-themed gradient design with orange and black colors
 
 ## Project Structure
 

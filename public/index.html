@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Management System</title>
+    <title>MotoX Pro - Motocross Bike Inventory</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📦 Inventory Management</h1>
-            <p class="subtitle">Manage your retail store inventory with ease</p>
+            <h1>🏍️ MotoX Pro Inventory</h1>
+            <p class="subtitle">Premium Motocross Bikes & Gear - Manage Your Inventory</p>
         </header>
 
         <div class="controls">
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Search products..." />
+                <input type="text" id="searchInput" placeholder="🔍 Search bikes, helmets, gear..." />
             </div>
-            <button class="btn btn-primary" onclick="showAddModal()">+ Add New Product</button>
+            <button class="btn btn-primary" onclick="showAddModal()">+ Add New Item</button>
         </div>
 
         <div class="stats">
             <div class="stat-card">
                 <div class="stat-value" id="totalProducts">0</div>
-                <div class="stat-label">Total Products</div>
+                <div class="stat-label">Total Items</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value" id="totalValue">$0</div>
@@ -44,17 +44,17 @@
     <div id="addModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Add New Product</h2>
+                <h2>Add New Item</h2>
                 <span class="close" onclick="closeAddModal()">&times;</span>
             </div>
             <form id="addProductForm" onsubmit="addProduct(event)">
                 <div class="form-group">
-                    <label for="productName">Product Name *</label>
-                    <input type="text" id="productName" required>
+                    <label for="productName">Item Name *</label>
+                    <input type="text" id="productName" placeholder="e.g., Yamaha YZ450F, Fox Helmet" required>
                 </div>
                 <div class="form-group">
                     <label for="productCategory">Category *</label>
-                    <input type="text" id="productCategory" required>
+                    <input type="text" id="productCategory" placeholder="Bikes, Helmets, Gear, Boots, Tires" required>
                 </div>
                 <div class="form-group">
                     <label for="productPrice">Price *</label>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="form-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeAddModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Add Product</button>
+                    <button type="submit" class="btn btn-primary">Add Item</button>
                 </div>
             </form>
         </div>
@@ -85,7 +85,7 @@
             </div>
             <form id="editQuantityForm" onsubmit="updateQuantity(event)">
                 <div class="form-group">
-                    <label for="editProductName">Product</label>
+                    <label for="editProductName">Item</label>
                     <input type="text" id="editProductName" readonly>
                 </div>
                 <div class="form-group">

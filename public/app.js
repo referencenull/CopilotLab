@@ -38,8 +38,8 @@ function displayProducts(productsToDisplay) {
     if (productsToDisplay.length === 0) {
         grid.innerHTML = `
             <div class="empty-state" style="grid-column: 1/-1;">
-                <h2>📦 No Products Found</h2>
-                <p>Start by adding your first product to the inventory</p>
+                <h2>🏍️ No Items Found</h2>
+                <p>Start by adding your first motocross bike or gear to the inventory</p>
             </div>
         `;
         return;
@@ -144,13 +144,13 @@ async function addProduct(event) {
         if (response.ok) {
             closeAddModal();
             loadProducts();
-            showSuccess('Product added successfully!');
+            showSuccess('Item added successfully!');
         } else {
-            showError('Failed to add product');
+            showError('Failed to add item');
         }
     } catch (error) {
         console.error('Error adding product:', error);
-        showError('Failed to add product');
+        showError('Failed to add item');
     }
 }
 
@@ -184,7 +184,7 @@ async function updateQuantity(event) {
 
 // Delete product
 async function deleteProduct(id) {
-    if (!confirm('Are you sure you want to delete this product?')) {
+    if (!confirm('Are you sure you want to delete this item?')) {
         return;
     }
     
@@ -195,13 +195,13 @@ async function deleteProduct(id) {
         
         if (response.ok) {
             loadProducts();
-            showSuccess('Product deleted successfully!');
+            showSuccess('Item deleted successfully!');
         } else {
-            showError('Failed to delete product');
+            showError('Failed to delete item');
         }
     } catch (error) {
         console.error('Error deleting product:', error);
-        showError('Failed to delete product');
+        showError('Failed to delete item');
     }
 }
 
